@@ -1,0 +1,19 @@
+﻿@page "/"
+@inject DataManager _dataManager
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Retrieved @AllPeople.Count people from the data manager.
+
+@code{
+    List<Person> AllPeople = new();
+
+    protected override void OnInitialized()
+    {
+        // uncomment the line below to generate data and run it ONCE
+        //_dataManager.GenerateData();
+
+        AllPeople = _dataManager.GetAllPeople();
+    }
+}
