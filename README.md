@@ -2,7 +2,7 @@
 
 Carl and Jeff want to know why their Blazor Server app is slow under a heavy load, and how to fix it.
 
-YouTube Video: https://youtu.be/
+YouTube Video: https://youtu.be/-RTbYcAuIWo
 
 Blazor Puzzle Home Page: https://blazorpuzzle.com
 
