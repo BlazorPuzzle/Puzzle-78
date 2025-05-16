@@ -1,0 +1,22 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.OutputCaching
+@inject DataManager _dataManager
+@attribute [OutputCache(Duration = 1000)]
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Retrieved @AllPeople.Count people from the data manager.
+
+@code{
+    List<Person> AllPeople = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // uncomment the line below to generate data and run it ONCE
+        //_dataManager.GenerateData();
+
+        AllPeople = await _dataManager.GetAllPeople();
+    }
+}
